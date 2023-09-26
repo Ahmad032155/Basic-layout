@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout</title>
+    <style>
+        :root{
+            --color:red;
+            --main-color:yellow;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: slategray;
+            padding: 0;
+            margin: 0;
+        }
+        #Container{
+            border: 0px solid black;
+            width: 1000px;
+            background: white;
+            margin: 0 auto;
+        }
+        #Header{
+            background-color:var(--color);
+            height: 100px;
+            text-align: center;
+        }
+        #Header h1{
+            margin: 0;
+            padding: 30px 0;
+        }
+        #Menu{
+            background-color:lightsalmon ;
+        }
+        #Menu li{
+            display: inline-block;
+        }
+        #Menu li a{
+            display: block;
+            padding: 10px 13px;
+            text-decoration: none;
+            color: black;
+        }
+        #Menu li a:hover{
+            text-decoration: underline green;
+            color: var(--main-color);
+        }
+        #Menu ul{
+            margin: 0;
+            padding: 0;
+        }
+        #Content{
+            width: 800px;
+            float: left;
+            padding: 10px;
+            min-height: 500px;
+            box-sizing: border-box;
+        }
+        .sda{
+            color:var(--color);
+        }
+        #Sidebar{
+            background-color: lightblue;
+            width: 150px;
+            float: right;
+            min-height: 500px;
+        }
+        #Sidebar li a{
+            text-decoration: none;
+            color:black;
+        }
+        #Sidebar li a:hover{
+            color: aqua;
+        }
+        #Footer{
+            background-color:var(--color) ;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="Container">
+        <div id="Header">
+            <h1>Main Heading</h1>
+        </div>
+        <div id="Menu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Gellary</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+        <div id="Content" class="dfr">
+            <h2>Basic Layout</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae ut quisquam voluptatem, ratione animi, consectetur voluptate exercitationem earum corporis aspernatur, architecto quos rerum perspiciatis blanditiis. Possimus, expedita nostrum a iure ad soluta nisi perspiciatis qui assumenda ducimus laudantium modi natus eos quos! Est ipsam at nesciunt labore fugit velit porro veniam pariatur provident aut qui id architecto repellendus, quas inventore consequuntur eaque debitis vitae. Cum voluptatum consequatur optio similique ipsa quae aspernatur tempora repudiandae quam quis accusantium modi ad illo pariatur illum adipisci cupiditate, deleniti atque laborum vero perspiciatis debitis aliquam dicta. Unde, natus sequi. Dolor necessitatibus soluta iste fuga!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aut dolorum aliquid quis officia sed esse vel, iusto saepe nulla facilis commodi tenetur explicabo? Eius adipisci animi repellendus inventore tempora mollitia facere sint dolores esse. Ipsam adipisci consequuntur corrupti nesciunt quae cum voluptas, animi modi inventore ad sint rerum, beatae rem nemo perspiciatis excepturi ullam consequatur eligendi! Numquam, corporis natus! Ad distinctio eius, corporis asperiores id cumque nemo amet accusamus libero dolores consequuntur, voluptas quos? Magnam, reprehenderit. Officiis consequatur exercitationem quidem eligendi, quod corrupti officia ipsam est beatae dolores. Error distinctio qui ullam eveniet labore, modi repellat provident maiores molestiae dignissimos dolores mollitia soluta quibusdam officia unde fuga optio. Ullam nesciunt non molestiae exercitationem aliquid quis asperiores natus maiores saepe!</p>
+        </div>
+        <div id="Sidebar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Gellary</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+        <div id="Footer">Ahmad@copyright2023</div>
+    </div>
+    <script>
+        let element;
+        document.getElementById("Header").innerHTML="<h1>Asad</h1>";
+        document.getElementById("Content").setAttribute("class","sda");
+        element = document.getElementById("Content").getAttribute("class");
+        console.log(element);
+
+    </script>
+</body>
+</html>
